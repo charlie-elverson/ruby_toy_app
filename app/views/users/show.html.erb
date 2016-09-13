@@ -12,7 +12,7 @@
 
 <p>
   <strong>First Post:</strong>
-  <% if @user.microposts.first.exists? %>
+  <% if !@user.microposts.first.nil? %>
     <%= @user.microposts.first.content %>
   <% end %>
 </p>
